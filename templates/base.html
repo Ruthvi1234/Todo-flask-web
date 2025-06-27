@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}TODO List{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- ✅ Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">MyTodo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+      
+      <!-- Left: Nav links -->
+      <ul class="navbar-nav d-flex flex-row gap-2 mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+
+        </li>
+      </ul>
+
+      <!-- Centered: Search bar in navbar -->
+<form class="d-flex mx-auto" role="search">
+  <input class="form-control form-control-sm me-2" type="search" placeholder="Search">
+  <button class="btn btn-sm btn-outline-dark" type="submit">Search</button>
+</form>
+
+
+    </div>
+  </div>
+</nav>
+
+
+    <!-- ✅ Content block (no container) -->
+    {% block body %}{% endblock %}
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block scripts %}{% endblock %}
+</body>
+</html>
+

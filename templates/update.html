@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Update | TODO{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <!-- Heading -->
+      <h3 class="mb-4">Update Todo</h3>
+
+      <!-- Update Form -->
+      <form method="POST">
+        <div class="mb-3">
+          <label class="form-label">Todo Title</label>
+          <input type="text" name="title" class="form-control" value="{{ todo.title }}" placeholder="Enter title" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Todo Description</label>
+          <input type="text" name="desc" class="form-control" value="{{ todo.desc }}" placeholder="Enter description" required>
+        </div>
+        <div class="d-flex">
+          <button type="submit" class="btn btn-primary me-2">Update</button>
+          <a href="/" class="btn btn-secondary">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

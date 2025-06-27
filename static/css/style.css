@@ -1,0 +1,65 @@
+/* Reset some Bootstrap spacing */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+  color: #343a40;
+}
+
+/* Navbar styling */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+/* Form styling */
+form input,
+form button {
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+form input:focus {
+  border-color: #343a40;
+  box-shadow: 0 0 0 0.1rem rgba(52, 58, 64, 0.25);
+}
+
+/* Button styles */
+.btn-dark, .btn-outline-dark {
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Todo table */
+.table {
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: #343a40;
+  color: white;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Alert box */
+.alert {
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Spacing for sections */
+.mt-5, .my-3 {
+  margin-top: 2rem !important;
+}
